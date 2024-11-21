@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagem de Carinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .message-box {
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #FFF0F5;
+            display: inline-block;
+            max-width: 500px;
+        }
+        .message {
+            font-size: 20px;
+            color: #FF69B4;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #FF69B4;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #FF69B4;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #FF1493;
+        }
+    </style>
+</head>
+<body>
+    <h1>MENSAGEM IMPORTANTE PARA O MEU MOMO</h1>
+    <div>
+        <input type="text" id="nomeInput" placeholder="Nome da senhorita..." />
+        <button onclick="enviarMensagem()">Enviar Mensagem </button> <H2>(e pra vc escrever seu nome)</H2>
+    </div>
+    <div class="message-box" id="mensagemBox" style="display:none;">
+        <p class="message" id="mensagem"></p>
+    </div>
+
+    <script>
+        // Função para gerar a mensagem de carinho
+        const gerarMensagem = (nome) => {
+            return `Meu xuxu eu sei que nao e algo que se diga UAU, mas te amo e nao quero te ver triste nao sei o que houve exatamente mas vai fica tudo bem, e eu estou aqui para tudo, te amo!!
+            !!!!!!!!!
+            sua bunda que eu nao te amo MARJORI`
+        };
+
+        // Função que é chamada ao clicar no botão
+        function enviarMensagem() {
+            const nome = document.getElementById("nomeInput").value;
+            if (nome) {
+                const mensagem = gerarMensagem(nome);
+                document.getElementById("mensagem").textContent = mensagem;
+                document.getElementById("mensagemBox").style.display = "block";
+            } else {
+                alert("Por favor, digite o seu NOME MOCREIA!");
+            }
+        }
+    </script>
+</body>
+</html>
